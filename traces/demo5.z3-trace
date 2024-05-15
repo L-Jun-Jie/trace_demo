@@ -1,0 +1,2141 @@
+-------- [mk_bool_var] mk_bool_var ../src/smt/smt_internalizer.cpp:926 ---------
+creating boolean variable: 0 for:
+true 1
+------------------------------------------------
+-------- [begin_assert_expr] assert_expr_core ../src/smt/smt_context.cpp:3024 ---------
+(and (not (or (> x 8) (< y 6))) (<= z (* 3 y)) (>= (* x 3) y)) null
+------------------------------------------------
+-------- [begin_assert_expr_ll] assert_expr_core ../src/smt/smt_context.cpp:3025 ---------
+#17 := (* x 3)
+#18 := (>= #17 y)
+#15 := (* 3 y)
+#16 := (<= z #15)
+#10 := (< y 6)
+#7 := (> x 8)
+#11 := (or #7 #10)
+#12 := (not #11)
+(and #12 #16 #18)
+
+------------------------------------------------
+-------- [end_assert_expr_ll] assert_expr_core ../src/smt/smt_context.cpp:3032 ---------
+#6 := 8
+#5 := x
+#37 := (<= x 8)
+#9 := 6
+#8 := y
+#44 := (>= y 6)
+#47 := 0
+#13 := z
+#49 := -1
+#50 := (* -1 z)
+#14 := 3
+#15 := (* 3 y)
+#51 := (+ #15 #50)
+#45 := (>= #51 0)
+#48 := (* -1 y)
+#46 := (* 3 x)
+#52 := (+ #46 #48)
+#53 := (>= #52 0)
+asserted formulas:
+#37 #44 #45 #53 
+------------------------------------------------
+-------- [internalize] operator() ../src/smt/smt_setup.cpp:53 ---------
+setup 0x621a4723f560
+------------------------------------------------
+-------- [internalize] register_plugin ../src/smt/smt_context.cpp:2883 ---------
+0x621a4723f560 5
+------------------------------------------------
+-------- [arith_verbose] mk_enode ../src/smt/theory_lra.cpp:562 ---------
+1 internalized: 0
+------------------------------------------------
+-------- [push_new_th_diseqs] push_new_th_diseqs ../src/smt/smt_context.cpp:1454 ---------
+#54 1 v0 th: 5
+------------------------------------------------
+-------- [add_var] add_var ../src/math/lp/lar_solver.cpp:1418 ---------
+adding var 0 int
+------------------------------------------------
+-------- [add_var] add_new_var_to_core_fields_for_mpq ../src/math/lp/lar_solver.cpp:1454 ---------
+j = 0
+------------------------------------------------
+-------- [lar_solver] mk_var_bound ../src/math/lp/lar_solver.cpp:1677 ---------
+j = j0 >= 1
+------------------------------------------------
+-------- [lar_solver_feas] update_column_type_and_bound ../src/math/lp/lar_solver.cpp:1711 ---------
+j = 0 was feas
+------------------------------------------------
+-------- [lar_solver_feas] update_column_type_and_bound ../src/math/lp/lar_solver.cpp:1799 ---------
+j0 >= 1
+dep:
+j0 >= 1
+
+------------------------------------------------
+-------- [lar_solver] insert_to_columns_with_changed_bounds ../src/math/lp/lar_solver.cpp:1823 ---------
+column 0 non-feas
+------------------------------------------------
+-------- [lar_solver_feas] update_column_type_and_bound ../src/math/lp/lar_solver.cpp:1818 ---------
+j = 0 became non-feas, and non-bounded
+------------------------------------------------
+-------- [lar_solver] mk_var_bound ../src/math/lp/lar_solver.cpp:1677 ---------
+j = j0 <= 1
+------------------------------------------------
+-------- [lar_solver_feas] update_column_type_and_bound ../src/math/lp/lar_solver.cpp:1711 ---------
+j = 0 was non-feas
+------------------------------------------------
+-------- [lar_solver_feas] update_column_type_and_bound ../src/math/lp/lar_solver.cpp:1799 ---------
+j0 <= 1
+dep:
+j0 <= 1
+
+------------------------------------------------
+-------- [lar_solver] insert_to_columns_with_changed_bounds ../src/math/lp/lar_solver.cpp:1823 ---------
+column 0 non-feas
+------------------------------------------------
+-------- [lar_solver_feas] update_column_type_and_bound ../src/math/lp/lar_solver.cpp:1818 ---------
+j = 0 became non-feas, and bounded
+------------------------------------------------
+-------- [arith] add_const ../src/smt/theory_lra.cpp:244 ---------
+add 1, var = 0
+------------------------------------------------
+-------- [arith_verbose] mk_enode ../src/smt/theory_lra.cpp:562 ---------
+1.0 internalized: 0
+------------------------------------------------
+-------- [push_new_th_diseqs] push_new_th_diseqs ../src/smt/smt_context.cpp:1454 ---------
+#55 1.0 v1 th: 5
+------------------------------------------------
+-------- [add_var] add_var ../src/math/lp/lar_solver.cpp:1418 ---------
+adding var 1 nonint
+------------------------------------------------
+-------- [add_var] add_new_var_to_core_fields_for_mpq ../src/math/lp/lar_solver.cpp:1454 ---------
+j = 1
+------------------------------------------------
+-------- [lar_solver] mk_var_bound ../src/math/lp/lar_solver.cpp:1677 ---------
+j = j1 >= 1
+------------------------------------------------
+-------- [lar_solver_feas] update_column_type_and_bound ../src/math/lp/lar_solver.cpp:1711 ---------
+j = 1 was feas
+------------------------------------------------
+-------- [lar_solver_feas] update_column_type_and_bound ../src/math/lp/lar_solver.cpp:1799 ---------
+j1 >= 1
+dep:
+j1 >= 1
+
+------------------------------------------------
+-------- [lar_solver] insert_to_columns_with_changed_bounds ../src/math/lp/lar_solver.cpp:1823 ---------
+column 1 non-feas
+------------------------------------------------
+-------- [lar_solver_feas] update_column_type_and_bound ../src/math/lp/lar_solver.cpp:1818 ---------
+j = 1 became non-feas, and non-bounded
+------------------------------------------------
+-------- [lar_solver] mk_var_bound ../src/math/lp/lar_solver.cpp:1677 ---------
+j = j1 <= 1
+------------------------------------------------
+-------- [lar_solver_feas] update_column_type_and_bound ../src/math/lp/lar_solver.cpp:1711 ---------
+j = 1 was non-feas
+------------------------------------------------
+-------- [lar_solver_feas] update_column_type_and_bound ../src/math/lp/lar_solver.cpp:1799 ---------
+j1 <= 1
+dep:
+j1 <= 1
+
+------------------------------------------------
+-------- [lar_solver] insert_to_columns_with_changed_bounds ../src/math/lp/lar_solver.cpp:1823 ---------
+column 1 non-feas
+------------------------------------------------
+-------- [lar_solver_feas] update_column_type_and_bound ../src/math/lp/lar_solver.cpp:1818 ---------
+j = 1 became non-feas, and bounded
+------------------------------------------------
+-------- [arith] add_const ../src/smt/theory_lra.cpp:244 ---------
+add 1.0, var = 1
+------------------------------------------------
+-------- [arith_verbose] mk_enode ../src/smt/theory_lra.cpp:562 ---------
+0 internalized: 0
+------------------------------------------------
+-------- [push_new_th_diseqs] push_new_th_diseqs ../src/smt/smt_context.cpp:1454 ---------
+#47 0 v2 th: 5
+------------------------------------------------
+-------- [add_var] add_var ../src/math/lp/lar_solver.cpp:1418 ---------
+adding var 2 int
+------------------------------------------------
+-------- [add_var] add_new_var_to_core_fields_for_mpq ../src/math/lp/lar_solver.cpp:1454 ---------
+j = 2
+------------------------------------------------
+-------- [lar_solver] mk_var_bound ../src/math/lp/lar_solver.cpp:1677 ---------
+j = j2 >= 0
+------------------------------------------------
+-------- [lar_solver_feas] update_column_type_and_bound ../src/math/lp/lar_solver.cpp:1711 ---------
+j = 2 was feas
+------------------------------------------------
+-------- [lar_solver_feas] update_column_type_and_bound ../src/math/lp/lar_solver.cpp:1799 ---------
+j2 >= 0
+dep:
+j2 >= 0
+
+------------------------------------------------
+-------- [lar_solver] insert_to_columns_with_changed_bounds ../src/math/lp/lar_solver.cpp:1823 ---------
+column 2 feas
+------------------------------------------------
+-------- [lar_solver_feas] update_column_type_and_bound ../src/math/lp/lar_solver.cpp:1818 ---------
+j = 2 became feas, and non-bounded
+------------------------------------------------
+-------- [lar_solver] mk_var_bound ../src/math/lp/lar_solver.cpp:1677 ---------
+j = j2 <= 0
+------------------------------------------------
+-------- [lar_solver_feas] update_column_type_and_bound ../src/math/lp/lar_solver.cpp:1711 ---------
+j = 2 was feas
+------------------------------------------------
+-------- [lar_solver_feas] update_column_type_and_bound ../src/math/lp/lar_solver.cpp:1799 ---------
+j2 <= 0
+dep:
+j2 <= 0
+
+------------------------------------------------
+-------- [lar_solver] insert_to_columns_with_changed_bounds ../src/math/lp/lar_solver.cpp:1823 ---------
+column 2 feas
+------------------------------------------------
+-------- [lar_solver_feas] update_column_type_and_bound ../src/math/lp/lar_solver.cpp:1818 ---------
+j = 2 became feas, and bounded
+------------------------------------------------
+-------- [arith] add_const ../src/smt/theory_lra.cpp:244 ---------
+add 0, var = 2
+------------------------------------------------
+-------- [arith_verbose] mk_enode ../src/smt/theory_lra.cpp:562 ---------
+0.0 internalized: 0
+------------------------------------------------
+-------- [push_new_th_diseqs] push_new_th_diseqs ../src/smt/smt_context.cpp:1454 ---------
+#56 0.0 v3 th: 5
+------------------------------------------------
+-------- [add_var] add_var ../src/math/lp/lar_solver.cpp:1418 ---------
+adding var 3 nonint
+------------------------------------------------
+-------- [add_var] add_new_var_to_core_fields_for_mpq ../src/math/lp/lar_solver.cpp:1454 ---------
+j = 3
+------------------------------------------------
+-------- [lar_solver] mk_var_bound ../src/math/lp/lar_solver.cpp:1677 ---------
+j = j3 >= 0
+------------------------------------------------
+-------- [lar_solver_feas] update_column_type_and_bound ../src/math/lp/lar_solver.cpp:1711 ---------
+j = 3 was feas
+------------------------------------------------
+-------- [lar_solver_feas] update_column_type_and_bound ../src/math/lp/lar_solver.cpp:1799 ---------
+j3 >= 0
+dep:
+j3 >= 0
+
+------------------------------------------------
+-------- [lar_solver] insert_to_columns_with_changed_bounds ../src/math/lp/lar_solver.cpp:1823 ---------
+column 3 feas
+------------------------------------------------
+-------- [lar_solver_feas] update_column_type_and_bound ../src/math/lp/lar_solver.cpp:1818 ---------
+j = 3 became feas, and non-bounded
+------------------------------------------------
+-------- [lar_solver] mk_var_bound ../src/math/lp/lar_solver.cpp:1677 ---------
+j = j3 <= 0
+------------------------------------------------
+-------- [lar_solver_feas] update_column_type_and_bound ../src/math/lp/lar_solver.cpp:1711 ---------
+j = 3 was feas
+------------------------------------------------
+-------- [lar_solver_feas] update_column_type_and_bound ../src/math/lp/lar_solver.cpp:1799 ---------
+j3 <= 0
+dep:
+j3 <= 0
+
+------------------------------------------------
+-------- [lar_solver] insert_to_columns_with_changed_bounds ../src/math/lp/lar_solver.cpp:1823 ---------
+column 3 feas
+------------------------------------------------
+-------- [lar_solver_feas] update_column_type_and_bound ../src/math/lp/lar_solver.cpp:1818 ---------
+j = 3 became feas, and bounded
+------------------------------------------------
+-------- [arith] add_const ../src/smt/theory_lra.cpp:244 ---------
+add 0.0, var = 3
+------------------------------------------------
+-------- [internalize] register_plugin ../src/smt/smt_context.cpp:2883 ---------
+0x621a4723f560 8
+------------------------------------------------
+-------- [internalize] register_plugin ../src/smt/smt_context.cpp:2883 ---------
+0x621a4723f560 7
+------------------------------------------------
+-------- [internalize] register_plugin ../src/smt/smt_context.cpp:2883 ---------
+0x621a4723f560 9
+------------------------------------------------
+-------- [internalize] register_plugin ../src/smt/smt_context.cpp:2883 ---------
+0x621a4723f560 10
+------------------------------------------------
+-------- [internalize] register_plugin ../src/smt/smt_context.cpp:2883 ---------
+0x621a4723f560 11
+------------------------------------------------
+-------- [internalize] register_plugin ../src/smt/smt_context.cpp:2883 ---------
+0x621a4723f560 13
+------------------------------------------------
+-------- [internalize] register_plugin ../src/smt/smt_context.cpp:2883 ---------
+0x621a4723f560 12
+------------------------------------------------
+-------- [internalize] register_plugin ../src/smt/smt_context.cpp:2883 ---------
+0x621a4723f560 14
+------------------------------------------------
+-------- [internalize] register_plugin ../src/smt/smt_context.cpp:2883 ---------
+0x621a4723f560 16
+------------------------------------------------
+-------- [internalize] register_plugin ../src/smt/smt_context.cpp:2883 ---------
+0x621a4723f560 15
+------------------------------------------------
+-------- [internalize_assertions] internalize_assertions ../src/smt/smt_context.cpp:3211 ---------
+internalize_assertions()...
+------------------------------------------------
+-------- [internalize] internalize_rec ../src/smt/smt_internalizer.cpp:369 ---------
+internalizing:
+(<= x 8)
+------------------------------------------------
+-------- [mk_bool_var] mk_bool_var ../src/smt/smt_internalizer.cpp:926 ---------
+creating boolean variable: 1 for:
+(<= x 8) 37
+------------------------------------------------
+-------- [internalize] internalize_rec ../src/smt/smt_internalizer.cpp:369 ---------
+internalizing:
+x
+------------------------------------------------
+-------- [arith] apply_sort_cnstr ../src/smt/theory_lra.cpp:1012 ---------
+sort constraint: 5: x
+------------------------------------------------
+-------- [arith] apply_sort_cnstr ../src/smt/theory_lra.cpp:1012 ---------
+sort constraint: 5: x
+------------------------------------------------
+-------- [push_new_th_diseqs] push_new_th_diseqs ../src/smt/smt_context.cpp:1454 ---------
+#5 x v4 th: 5
+------------------------------------------------
+-------- [arith_verbose] mk_enode ../src/smt/theory_lra.cpp:562 ---------
+x internalized: 1
+------------------------------------------------
+-------- [add_var] add_var ../src/math/lp/lar_solver.cpp:1418 ---------
+adding var 4 int
+------------------------------------------------
+-------- [add_var] add_new_var_to_core_fields_for_mpq ../src/math/lp/lar_solver.cpp:1454 ---------
+j = 4
+------------------------------------------------
+-------- [lar_solver] mk_var_bound ../src/math/lp/lar_solver.cpp:1677 ---------
+j = j4 <= 8
+------------------------------------------------
+-------- [lar_solver] mk_var_bound ../src/math/lp/lar_solver.cpp:1677 ---------
+j = j4 >= 9
+------------------------------------------------
+-------- [arith_verbose] updt_unassigned_bounds ../src/smt/theory_lra.cpp:742 ---------
+v4 0 += 1
+------------------------------------------------
+-------- [assign_core] assign_core ../src/smt/smt_context.cpp:284 ---------
+propagating: 1 (<= x 8) 
+relevant: 0 level: 0 is atom 1
+justification -1: :
+false
+
+------------------------------------------------
+-------- [phase_selection] assign_core ../src/smt/smt_context.cpp:289 ---------
+saving phase, is_pos: 1 l: 1
+------------------------------------------------
+-------- [propagate_relevancy] relevant_eh ../src/smt/smt_context.cpp:1580 ---------
+marking as relevant:
+(<= x 8) 0
+------------------------------------------------
+-------- [propagate_relevancy] propagate ../src/smt/smt_relevancy.cpp:460 ---------
+marking as relevant:
+(<= x 8)
+------------------------------------------------
+-------- [propagate_relevancy] relevant_eh ../src/smt/smt_context.cpp:1580 ---------
+marking as relevant:
+8 0
+------------------------------------------------
+-------- [propagate_relevancy] relevant_eh ../src/smt/smt_context.cpp:1580 ---------
+marking as relevant:
+x 0
+------------------------------------------------
+-------- [propagate_relevancy] propagate ../src/smt/smt_relevancy.cpp:460 ---------
+marking as relevant:
+8
+------------------------------------------------
+-------- [propagate_relevancy] propagate ../src/smt/smt_relevancy.cpp:460 ---------
+marking as relevant:
+x
+------------------------------------------------
+-------- [internalize] internalize_rec ../src/smt/smt_internalizer.cpp:369 ---------
+internalizing:
+(>= y 6)
+------------------------------------------------
+-------- [mk_bool_var] mk_bool_var ../src/smt/smt_internalizer.cpp:926 ---------
+creating boolean variable: 2 for:
+(>= y 6) 44
+------------------------------------------------
+-------- [internalize] internalize_rec ../src/smt/smt_internalizer.cpp:369 ---------
+internalizing:
+y
+------------------------------------------------
+-------- [arith] apply_sort_cnstr ../src/smt/theory_lra.cpp:1012 ---------
+sort constraint: 8: y
+------------------------------------------------
+-------- [arith] apply_sort_cnstr ../src/smt/theory_lra.cpp:1012 ---------
+sort constraint: 8: y
+------------------------------------------------
+-------- [push_new_th_diseqs] push_new_th_diseqs ../src/smt/smt_context.cpp:1454 ---------
+#8 y v5 th: 5
+------------------------------------------------
+-------- [arith_verbose] mk_enode ../src/smt/theory_lra.cpp:562 ---------
+y internalized: 1
+------------------------------------------------
+-------- [add_var] add_var ../src/math/lp/lar_solver.cpp:1418 ---------
+adding var 5 int
+------------------------------------------------
+-------- [add_var] add_new_var_to_core_fields_for_mpq ../src/math/lp/lar_solver.cpp:1454 ---------
+j = 5
+------------------------------------------------
+-------- [lar_solver] mk_var_bound ../src/math/lp/lar_solver.cpp:1677 ---------
+j = j5 >= 6
+------------------------------------------------
+-------- [lar_solver] mk_var_bound ../src/math/lp/lar_solver.cpp:1677 ---------
+j = j5 <= 5
+------------------------------------------------
+-------- [arith_verbose] updt_unassigned_bounds ../src/smt/theory_lra.cpp:742 ---------
+v5 0 += 1
+------------------------------------------------
+-------- [assign_core] assign_core ../src/smt/smt_context.cpp:284 ---------
+propagating: 2 (>= y 6) 
+relevant: 0 level: 0 is atom 1
+justification -1: :
+false
+
+------------------------------------------------
+-------- [phase_selection] assign_core ../src/smt/smt_context.cpp:289 ---------
+saving phase, is_pos: 1 l: 2
+------------------------------------------------
+-------- [propagate_relevancy] relevant_eh ../src/smt/smt_context.cpp:1580 ---------
+marking as relevant:
+(>= y 6) 0
+------------------------------------------------
+-------- [propagate_relevancy] propagate ../src/smt/smt_relevancy.cpp:460 ---------
+marking as relevant:
+(>= y 6)
+------------------------------------------------
+-------- [propagate_relevancy] relevant_eh ../src/smt/smt_context.cpp:1580 ---------
+marking as relevant:
+6 0
+------------------------------------------------
+-------- [propagate_relevancy] relevant_eh ../src/smt/smt_context.cpp:1580 ---------
+marking as relevant:
+y 0
+------------------------------------------------
+-------- [propagate_relevancy] propagate ../src/smt/smt_relevancy.cpp:460 ---------
+marking as relevant:
+6
+------------------------------------------------
+-------- [propagate_relevancy] propagate ../src/smt/smt_relevancy.cpp:460 ---------
+marking as relevant:
+y
+------------------------------------------------
+-------- [internalize] internalize_rec ../src/smt/smt_internalizer.cpp:369 ---------
+internalizing:
+(>= (+ (* 3 y) (* (- 1) z)) 0)
+------------------------------------------------
+-------- [mk_bool_var] mk_bool_var ../src/smt/smt_internalizer.cpp:926 ---------
+creating boolean variable: 3 for:
+(>= (+ (* 3 y) (* (- 1) z)) 0) 45
+------------------------------------------------
+-------- [internalize] internalize_rec ../src/smt/smt_internalizer.cpp:369 ---------
+internalizing:
+z
+------------------------------------------------
+-------- [arith] apply_sort_cnstr ../src/smt/theory_lra.cpp:1012 ---------
+sort constraint: 13: z
+------------------------------------------------
+-------- [arith] apply_sort_cnstr ../src/smt/theory_lra.cpp:1012 ---------
+sort constraint: 13: z
+------------------------------------------------
+-------- [push_new_th_diseqs] push_new_th_diseqs ../src/smt/smt_context.cpp:1454 ---------
+#13 z v6 th: 5
+------------------------------------------------
+-------- [arith_verbose] mk_enode ../src/smt/theory_lra.cpp:562 ---------
+y internalized: 1
+------------------------------------------------
+-------- [arith_verbose] mk_enode ../src/smt/theory_lra.cpp:562 ---------
+3 internalized: 0
+------------------------------------------------
+-------- [arith_verbose] mk_enode ../src/smt/theory_lra.cpp:562 ---------
+(* 3 y) internalized: 0
+------------------------------------------------
+-------- [arith_verbose] mk_enode ../src/smt/theory_lra.cpp:562 ---------
+z internalized: 1
+------------------------------------------------
+-------- [arith_verbose] mk_enode ../src/smt/theory_lra.cpp:562 ---------
+-1 internalized: 0
+------------------------------------------------
+-------- [arith_verbose] mk_enode ../src/smt/theory_lra.cpp:562 ---------
+(* -1 z) internalized: 0
+------------------------------------------------
+-------- [arith_verbose] mk_enode ../src/smt/theory_lra.cpp:562 ---------
+(+ (* 3 y) (* -1 z)) internalized: 0
+------------------------------------------------
+-------- [push_new_th_diseqs] push_new_th_diseqs ../src/smt/smt_context.cpp:1454 ---------
+#51 (+ (* 3 y) (* -1 z)) v7 th: 5
+------------------------------------------------
+-------- [add_var] add_var ../src/math/lp/lar_solver.cpp:1418 ---------
+adding var 6 int
+------------------------------------------------
+-------- [add_var] add_new_var_to_core_fields_for_mpq ../src/math/lp/lar_solver.cpp:1454 ---------
+j = 6
+------------------------------------------------
+-------- [lar_solver_terms] add_term ../src/math/lp/lar_solver.cpp:1529 ---------
+- j6 + 3j5, ext_i =7
+------------------------------------------------
+-------- [dump_terms] add_row_from_term_no_constraint ../src/math/lp/lar_solver.cpp:1546 ---------
+3j5 - j6
+------------------------------------------------
+-------- [add_var] add_new_var_to_core_fields_for_mpq ../src/math/lp/lar_solver.cpp:1454 ---------
+j = 7
+------------------------------------------------
+-------- [lar_solver_feas] update_x ../src/math/lp/lp_core_solver_base.h:549 ---------
+not tracking feas j = 7, v = (0, 0) feas
+------------------------------------------------
+-------- [arith_verbose] internalize_linearized_def ../src/smt/theory_lra.cpp:812 ---------
+v7 := (+ (* 3 y) (* (- 1) z)) slack: 7 scopes: 0
+3j5 - j6
+------------------------------------------------
+-------- [lar_solver] mk_var_bound ../src/math/lp/lar_solver.cpp:1677 ---------
+j = _t7 >= 0
+------------------------------------------------
+-------- [lar_solver] mk_var_bound ../src/math/lp/lar_solver.cpp:1677 ---------
+j = _t7 <= -1
+------------------------------------------------
+-------- [arith_verbose] updt_unassigned_bounds ../src/smt/theory_lra.cpp:742 ---------
+v7 0 += 1
+------------------------------------------------
+-------- [assign_core] assign_core ../src/smt/smt_context.cpp:284 ---------
+propagating: 3 (>= (+ (* 3 y) (* (- 1) z)) 0) 
+relevant: 0 level: 0 is atom 1
+justification -1: :
+false
+
+------------------------------------------------
+-------- [phase_selection] assign_core ../src/smt/smt_context.cpp:289 ---------
+saving phase, is_pos: 1 l: 3
+------------------------------------------------
+-------- [propagate_relevancy] relevant_eh ../src/smt/smt_context.cpp:1580 ---------
+marking as relevant:
+(>= (+ (* 3 y) (* -1 z)) 0) 0
+------------------------------------------------
+-------- [propagate_relevancy] propagate ../src/smt/smt_relevancy.cpp:460 ---------
+marking as relevant:
+(>= (+ (* 3 y) (* -1 z)) 0)
+------------------------------------------------
+-------- [propagate_relevancy] relevant_eh ../src/smt/smt_context.cpp:1580 ---------
+marking as relevant:
+0 0
+------------------------------------------------
+-------- [propagate_relevancy] relevant_eh ../src/smt/smt_context.cpp:1580 ---------
+marking as relevant:
+(+ (* 3 y) (* -1 z)) 0
+------------------------------------------------
+-------- [propagate_relevancy] propagate ../src/smt/smt_relevancy.cpp:460 ---------
+marking as relevant:
+0
+------------------------------------------------
+-------- [propagate_relevancy] propagate ../src/smt/smt_relevancy.cpp:460 ---------
+marking as relevant:
+(+ (* 3 y) (* -1 z))
+------------------------------------------------
+-------- [propagate_relevancy] relevant_eh ../src/smt/smt_context.cpp:1580 ---------
+marking as relevant:
+(* -1 z) 0
+------------------------------------------------
+-------- [propagate_relevancy] relevant_eh ../src/smt/smt_context.cpp:1580 ---------
+marking as relevant:
+(* 3 y) 0
+------------------------------------------------
+-------- [propagate_relevancy] propagate ../src/smt/smt_relevancy.cpp:460 ---------
+marking as relevant:
+(* -1 z)
+------------------------------------------------
+-------- [propagate_relevancy] relevant_eh ../src/smt/smt_context.cpp:1580 ---------
+marking as relevant:
+z 0
+------------------------------------------------
+-------- [propagate_relevancy] relevant_eh ../src/smt/smt_context.cpp:1580 ---------
+marking as relevant:
+-1 0
+------------------------------------------------
+-------- [propagate_relevancy] propagate ../src/smt/smt_relevancy.cpp:460 ---------
+marking as relevant:
+(* 3 y)
+------------------------------------------------
+-------- [propagate_relevancy] relevant_eh ../src/smt/smt_context.cpp:1580 ---------
+marking as relevant:
+3 0
+------------------------------------------------
+-------- [propagate_relevancy] propagate ../src/smt/smt_relevancy.cpp:460 ---------
+marking as relevant:
+z
+------------------------------------------------
+-------- [propagate_relevancy] propagate ../src/smt/smt_relevancy.cpp:460 ---------
+marking as relevant:
+-1
+------------------------------------------------
+-------- [propagate_relevancy] propagate ../src/smt/smt_relevancy.cpp:460 ---------
+marking as relevant:
+3
+------------------------------------------------
+-------- [internalize] internalize_rec ../src/smt/smt_internalizer.cpp:369 ---------
+internalizing:
+(>= (+ (* 3 x) (* (- 1) y)) 0)
+------------------------------------------------
+-------- [mk_bool_var] mk_bool_var ../src/smt/smt_internalizer.cpp:926 ---------
+creating boolean variable: 4 for:
+(>= (+ (* 3 x) (* (- 1) y)) 0) 53
+------------------------------------------------
+-------- [arith_verbose] mk_enode ../src/smt/theory_lra.cpp:562 ---------
+x internalized: 1
+------------------------------------------------
+-------- [arith_verbose] mk_enode ../src/smt/theory_lra.cpp:562 ---------
+3 internalized: 1
+------------------------------------------------
+-------- [arith_verbose] mk_enode ../src/smt/theory_lra.cpp:562 ---------
+(* 3 x) internalized: 0
+------------------------------------------------
+-------- [arith_verbose] mk_enode ../src/smt/theory_lra.cpp:562 ---------
+y internalized: 1
+------------------------------------------------
+-------- [arith_verbose] mk_enode ../src/smt/theory_lra.cpp:562 ---------
+-1 internalized: 1
+------------------------------------------------
+-------- [arith_verbose] mk_enode ../src/smt/theory_lra.cpp:562 ---------
+(* -1 y) internalized: 0
+------------------------------------------------
+-------- [arith_verbose] mk_enode ../src/smt/theory_lra.cpp:562 ---------
+(+ (* 3 x) (* -1 y)) internalized: 0
+------------------------------------------------
+-------- [push_new_th_diseqs] push_new_th_diseqs ../src/smt/smt_context.cpp:1454 ---------
+#52 (+ (* 3 x) (* -1 y)) v8 th: 5
+------------------------------------------------
+-------- [lar_solver_terms] add_term ../src/math/lp/lar_solver.cpp:1529 ---------
+- j5 + 3j4, ext_i =8
+------------------------------------------------
+-------- [dump_terms] add_row_from_term_no_constraint ../src/math/lp/lar_solver.cpp:1546 ---------
+3j4 - j5
+------------------------------------------------
+-------- [add_var] add_new_var_to_core_fields_for_mpq ../src/math/lp/lar_solver.cpp:1454 ---------
+j = 8
+------------------------------------------------
+-------- [lar_solver_feas] update_x ../src/math/lp/lp_core_solver_base.h:549 ---------
+not tracking feas j = 8, v = (0, 0) feas
+------------------------------------------------
+-------- [arith_verbose] internalize_linearized_def ../src/smt/theory_lra.cpp:812 ---------
+v8 := (+ (* 3 x) (* (- 1) y)) slack: 8 scopes: 0
+3j4 - j5
+------------------------------------------------
+-------- [lar_solver] mk_var_bound ../src/math/lp/lar_solver.cpp:1677 ---------
+j = _t8 >= 0
+------------------------------------------------
+-------- [lar_solver] mk_var_bound ../src/math/lp/lar_solver.cpp:1677 ---------
+j = _t8 <= -1
+------------------------------------------------
+-------- [arith_verbose] updt_unassigned_bounds ../src/smt/theory_lra.cpp:742 ---------
+v8 0 += 1
+------------------------------------------------
+-------- [assign_core] assign_core ../src/smt/smt_context.cpp:284 ---------
+propagating: 4 (>= (+ (* 3 x) (* (- 1) y)) 0) 
+relevant: 0 level: 0 is atom 1
+justification -1: :
+false
+
+------------------------------------------------
+-------- [phase_selection] assign_core ../src/smt/smt_context.cpp:289 ---------
+saving phase, is_pos: 1 l: 4
+------------------------------------------------
+-------- [propagate_relevancy] relevant_eh ../src/smt/smt_context.cpp:1580 ---------
+marking as relevant:
+(>= (+ (* 3 x) (* -1 y)) 0) 0
+------------------------------------------------
+-------- [propagate_relevancy] propagate ../src/smt/smt_relevancy.cpp:460 ---------
+marking as relevant:
+(>= (+ (* 3 x) (* -1 y)) 0)
+------------------------------------------------
+-------- [propagate_relevancy] relevant_eh ../src/smt/smt_context.cpp:1580 ---------
+marking as relevant:
+(+ (* 3 x) (* -1 y)) 0
+------------------------------------------------
+-------- [propagate_relevancy] propagate ../src/smt/smt_relevancy.cpp:460 ---------
+marking as relevant:
+(+ (* 3 x) (* -1 y))
+------------------------------------------------
+-------- [propagate_relevancy] relevant_eh ../src/smt/smt_context.cpp:1580 ---------
+marking as relevant:
+(* -1 y) 0
+------------------------------------------------
+-------- [propagate_relevancy] relevant_eh ../src/smt/smt_context.cpp:1580 ---------
+marking as relevant:
+(* 3 x) 0
+------------------------------------------------
+-------- [propagate_relevancy] propagate ../src/smt/smt_relevancy.cpp:460 ---------
+marking as relevant:
+(* -1 y)
+------------------------------------------------
+-------- [propagate_relevancy] propagate ../src/smt/smt_relevancy.cpp:460 ---------
+marking as relevant:
+(* 3 x)
+------------------------------------------------
+-------- [internalize_assertions] internalize_assertions ../src/smt/smt_context.cpp:3240 ---------
+after internalize_assertions()...
+inconsistent: 0
+------------------------------------------------
+-------- [after_internalize_assertions] internalize_assertions ../src/smt/smt_context.cpp:3242 ---------
+Logical context:
+scope-lvl: 0
+base-lvl:  0
+search-lvl:  0
+inconsistent(): 0
+m_asserted_formulas.inconsistent(): 0
+0 #1 := true
+1 #6 := 8
+#5 := x
+#37 := (<= x 8)
+2 #9 := 6
+#8 := y
+#44 := (>= y 6)
+3 #47 := 0
+#13 := z
+#49 := -1
+#50 := (* -1 z)
+#14 := 3
+#15 := (* 3 y)
+#51 := (+ #15 #50)
+#45 := (>= #51 0)
+4 #48 := (* -1 y)
+#46 := (* 3 x)
+#52 := (+ #46 #48)
+#53 := (>= #52 0)
+#2 := false
+#54 := 1
+#55 := 1.0
+#56 := 0.0
+asserted formulas:
+#37 #44 #45 #53 
+current assignment:
+1 #37: (<= x 8)
+2 #44: (>= y 6)
+3 #45: (>= (+ (* 3 y) (* -1 z)) 0)
+4 #53: (>= (+ (* 3 x) (* -1 y)) 0)
+equivalence classes: 17
+#1: true
+#2: false
+#54: 1
+#55: 1.0
+#47: 0
+#56: 0.0
+#5: x
+#8: y
+#13: z
+#14: 3
+#15: (* 3 y)
+#49: -1
+#50: (* -1 z)
+#51: (+ (* 3 y) (* -1 z))
+#46: (* 3 x)
+#48: (* -1 y)
+#52: (+ (* 3 x) (* -1 y))
+expression -> bool_var:
+(#1 -> 0) (#37 -> 1) (#44 -> 2) (#45 -> 3) (#53 -> 4) 
+relevant exprs:
+#37 #6 #5 #44 #9 #8 #45 #47 #51 #50 #15 #13 #49 #14 #53 #52 #48 #46 
+Theory arithmetic:
+number of constraints = 16
+(0) j0 >= 1
+(1) j0 <= 1
+(2) j1 >= 1
+(3) j1 <= 1
+(4) j2 >= 0
+(5) j2 <= 0
+(6) j3 >= 0
+(7) j3 <= 0
+3j5 - j6
+3j4 - j5
+ -  3j5 +  j6 +  _t7 = 0
+ -  3j4 +  j5 +  _t8 = 0
+
+inf columns: none
+[0]    := (0, 0)               [(1, 0), (1, 0)]
+[1]    := (0, 0)               [(1, 0), (1, 0)]
+[2]    := (0, 0)               [(0, 0), (0, 0)]
+[3]    := (0, 0)               [(0, 0), (0, 0)]
+[4]    := (0, 0)               [-oo, oo]
+[5]    := (0, 0)               [-oo, oo]
+[6]    := (0, 0)               [-oo, oo]
+[7]    := (0, 0) base          [-oo, oo]
+3j5 - j6
+[8]    := (0, 0) base          [-oo, oo]
+3j4 - j5
+irr: v0 j0, int := 54: 1
+irr: v1 j1 := 55: 1.0
+v2 j2, int := 47: 0
+irr: v3 j3 := 56: 0.0
+v4 j4, int := 5: x
+v5 j5, int := 8: y
+v6 j6, int := 13: z
+v7 t7, int := 51: (+ (* 3 y) (* -1 z))
+v8 t8, int := 52: (+ (* 3 x) (* -1 y))
+recfun
+disabled guards:
+
+enabled guards:
+
+decl2enodes:
+id 25 -> #51 #52
+id 27 -> #15 #50 #46 #48
+hot bool vars:
+------------------------------------------------
+-------- [unsat_core_bug] check ../src/smt/smt_context.cpp:3634 ---------
+
+------------------------------------------------
+-------- [unsat_core_bug] reset_assumptions ../src/smt/smt_context.cpp:3380 ---------
+reset 
+------------------------------------------------
+-------- [after_internalization] init_assumptions ../src/smt/smt_context.cpp:3376 ---------
+Logical context:
+scope-lvl: 0
+base-lvl:  0
+search-lvl:  0
+inconsistent(): 0
+m_asserted_formulas.inconsistent(): 0
+0 #1 := true
+1 #6 := 8
+#5 := x
+#37 := (<= x 8)
+2 #9 := 6
+#8 := y
+#44 := (>= y 6)
+3 #47 := 0
+#13 := z
+#49 := -1
+#50 := (* -1 z)
+#14 := 3
+#15 := (* 3 y)
+#51 := (+ #15 #50)
+#45 := (>= #51 0)
+4 #48 := (* -1 y)
+#46 := (* 3 x)
+#52 := (+ #46 #48)
+#53 := (>= #52 0)
+#2 := false
+#54 := 1
+#55 := 1.0
+#56 := 0.0
+asserted formulas:
+#37 #44 #45 #53 
+current assignment:
+1 #37: (<= x 8)
+2 #44: (>= y 6)
+3 #45: (>= (+ (* 3 y) (* -1 z)) 0)
+4 #53: (>= (+ (* 3 x) (* -1 y)) 0)
+equivalence classes: 17
+#1: true
+#2: false
+#54: 1
+#55: 1.0
+#47: 0
+#56: 0.0
+#5: x
+#8: y
+#13: z
+#14: 3
+#15: (* 3 y)
+#49: -1
+#50: (* -1 z)
+#51: (+ (* 3 y) (* -1 z))
+#46: (* 3 x)
+#48: (* -1 y)
+#52: (+ (* 3 x) (* -1 y))
+expression -> bool_var:
+(#1 -> 0) (#37 -> 1) (#44 -> 2) (#45 -> 3) (#53 -> 4) 
+relevant exprs:
+#37 #6 #5 #44 #9 #8 #45 #47 #51 #50 #15 #13 #49 #14 #53 #52 #48 #46 
+Theory arithmetic:
+number of constraints = 16
+(0) j0 >= 1
+(1) j0 <= 1
+(2) j1 >= 1
+(3) j1 <= 1
+(4) j2 >= 0
+(5) j2 <= 0
+(6) j3 >= 0
+(7) j3 <= 0
+3j5 - j6
+3j4 - j5
+ -  3j5 +  j6 +  _t7 = 0
+ -  3j4 +  j5 +  _t8 = 0
+
+inf columns: none
+[0]    := (0, 0)               [(1, 0), (1, 0)]
+[1]    := (0, 0)               [(1, 0), (1, 0)]
+[2]    := (0, 0)               [(0, 0), (0, 0)]
+[3]    := (0, 0)               [(0, 0), (0, 0)]
+[4]    := (0, 0)               [-oo, oo]
+[5]    := (0, 0)               [-oo, oo]
+[6]    := (0, 0)               [-oo, oo]
+[7]    := (0, 0) base          [-oo, oo]
+3j5 - j6
+[8]    := (0, 0) base          [-oo, oo]
+3j4 - j5
+irr: v0 j0, int := 54: 1
+irr: v1 j1 := 55: 1.0
+v2 j2, int := 47: 0
+irr: v3 j3 := 56: 0.0
+v4 j4, int := 5: x
+v5 j5, int := 8: y
+v6 j6, int := 13: z
+v7 t7, int := 51: (+ (* 3 y) (* -1 z))
+v8 t8, int := 52: (+ (* 3 x) (* -1 y))
+recfun
+disabled guards:
+
+enabled guards:
+
+decl2enodes:
+id 25 -> #51 #52
+id 27 -> #15 #50 #46 #48
+hot bool vars:
+------------------------------------------------
+-------- [before_search] check ../src/smt/smt_context.cpp:3639 ---------
+Logical context:
+scope-lvl: 0
+base-lvl:  0
+search-lvl:  0
+inconsistent(): 0
+m_asserted_formulas.inconsistent(): 0
+0 #1 := true
+1 #6 := 8
+#5 := x
+#37 := (<= x 8)
+2 #9 := 6
+#8 := y
+#44 := (>= y 6)
+3 #47 := 0
+#13 := z
+#49 := -1
+#50 := (* -1 z)
+#14 := 3
+#15 := (* 3 y)
+#51 := (+ #15 #50)
+#45 := (>= #51 0)
+4 #48 := (* -1 y)
+#46 := (* 3 x)
+#52 := (+ #46 #48)
+#53 := (>= #52 0)
+#2 := false
+#54 := 1
+#55 := 1.0
+#56 := 0.0
+asserted formulas:
+#37 #44 #45 #53 
+current assignment:
+1 #37: (<= x 8)
+2 #44: (>= y 6)
+3 #45: (>= (+ (* 3 y) (* -1 z)) 0)
+4 #53: (>= (+ (* 3 x) (* -1 y)) 0)
+equivalence classes: 17
+#1: true
+#2: false
+#54: 1
+#55: 1.0
+#47: 0
+#56: 0.0
+#5: x
+#8: y
+#13: z
+#14: 3
+#15: (* 3 y)
+#49: -1
+#50: (* -1 z)
+#51: (+ (* 3 y) (* -1 z))
+#46: (* 3 x)
+#48: (* -1 y)
+#52: (+ (* 3 x) (* -1 y))
+expression -> bool_var:
+(#1 -> 0) (#37 -> 1) (#44 -> 2) (#45 -> 3) (#53 -> 4) 
+relevant exprs:
+#37 #6 #5 #44 #9 #8 #45 #47 #51 #50 #15 #13 #49 #14 #53 #52 #48 #46 
+Theory arithmetic:
+number of constraints = 16
+(0) j0 >= 1
+(1) j0 <= 1
+(2) j1 >= 1
+(3) j1 <= 1
+(4) j2 >= 0
+(5) j2 <= 0
+(6) j3 >= 0
+(7) j3 <= 0
+3j5 - j6
+3j4 - j5
+ -  3j5 +  j6 +  _t7 = 0
+ -  3j4 +  j5 +  _t8 = 0
+
+inf columns: none
+[0]    := (0, 0)               [(1, 0), (1, 0)]
+[1]    := (0, 0)               [(1, 0), (1, 0)]
+[2]    := (0, 0)               [(0, 0), (0, 0)]
+[3]    := (0, 0)               [(0, 0), (0, 0)]
+[4]    := (0, 0)               [-oo, oo]
+[5]    := (0, 0)               [-oo, oo]
+[6]    := (0, 0)               [-oo, oo]
+[7]    := (0, 0) base          [-oo, oo]
+3j5 - j6
+[8]    := (0, 0) base          [-oo, oo]
+3j4 - j5
+irr: v0 j0, int := 54: 1
+irr: v1 j1 := 55: 1.0
+v2 j2, int := 47: 0
+irr: v3 j3 := 56: 0.0
+v4 j4, int := 5: x
+v5 j5, int := 8: y
+v6 j6, int := 13: z
+v7 t7, int := 51: (+ (* 3 y) (* -1 z))
+v8 t8, int := 52: (+ (* 3 x) (* -1 y))
+recfun
+disabled guards:
+
+enabled guards:
+
+decl2enodes:
+id 25 -> #51 #52
+id 27 -> #15 #50 #46 #48
+hot bool vars:
+------------------------------------------------
+-------- [search] search ../src/smt/smt_context.cpp:3750 ---------
+Logical context:
+scope-lvl: 0
+base-lvl:  0
+search-lvl:  0
+inconsistent(): 0
+m_asserted_formulas.inconsistent(): 0
+0 #1 := true
+1 #6 := 8
+#5 := x
+#37 := (<= x 8)
+2 #9 := 6
+#8 := y
+#44 := (>= y 6)
+3 #47 := 0
+#13 := z
+#49 := -1
+#50 := (* -1 z)
+#14 := 3
+#15 := (* 3 y)
+#51 := (+ #15 #50)
+#45 := (>= #51 0)
+4 #48 := (* -1 y)
+#46 := (* 3 x)
+#52 := (+ #46 #48)
+#53 := (>= #52 0)
+#2 := false
+#54 := 1
+#55 := 1.0
+#56 := 0.0
+asserted formulas:
+#37 #44 #45 #53 
+current assignment:
+1 #37: (<= x 8)
+2 #44: (>= y 6)
+3 #45: (>= (+ (* 3 y) (* -1 z)) 0)
+4 #53: (>= (+ (* 3 x) (* -1 y)) 0)
+equivalence classes: 17
+#1: true
+#2: false
+#54: 1
+#55: 1.0
+#47: 0
+#56: 0.0
+#5: x
+#8: y
+#13: z
+#14: 3
+#15: (* 3 y)
+#49: -1
+#50: (* -1 z)
+#51: (+ (* 3 y) (* -1 z))
+#46: (* 3 x)
+#48: (* -1 y)
+#52: (+ (* 3 x) (* -1 y))
+expression -> bool_var:
+(#1 -> 0) (#37 -> 1) (#44 -> 2) (#45 -> 3) (#53 -> 4) 
+relevant exprs:
+#37 #6 #5 #44 #9 #8 #45 #47 #51 #50 #15 #13 #49 #14 #53 #52 #48 #46 
+Theory arithmetic:
+number of constraints = 16
+(0) j0 >= 1
+(1) j0 <= 1
+(2) j1 >= 1
+(3) j1 <= 1
+(4) j2 >= 0
+(5) j2 <= 0
+(6) j3 >= 0
+(7) j3 <= 0
+3j5 - j6
+3j4 - j5
+ -  3j5 +  j6 +  _t7 = 0
+ -  3j4 +  j5 +  _t8 = 0
+
+inf columns: none
+[0]    := (0, 0)               [(1, 0), (1, 0)]
+[1]    := (0, 0)               [(1, 0), (1, 0)]
+[2]    := (0, 0)               [(0, 0), (0, 0)]
+[3]    := (0, 0)               [(0, 0), (0, 0)]
+[4]    := (0, 0)               [-oo, oo]
+[5]    := (0, 0)               [-oo, oo]
+[6]    := (0, 0)               [-oo, oo]
+[7]    := (0, 0) base          [-oo, oo]
+3j5 - j6
+[8]    := (0, 0) base          [-oo, oo]
+3j4 - j5
+irr: v0 j0, int := 54: 1
+irr: v1 j1 := 55: 1.0
+v2 j2, int := 47: 0
+irr: v3 j3 := 56: 0.0
+v4 j4, int := 5: x
+v5 j5, int := 8: y
+v6 j6, int := 13: z
+v7 t7, int := 51: (+ (* 3 y) (* -1 z))
+v8 t8, int := 52: (+ (* 3 x) (* -1 y))
+recfun
+disabled guards:
+
+enabled guards:
+
+decl2enodes:
+id 25 -> #51 #52
+id 27 -> #15 #50 #46 #48
+hot bool vars:
+#1  ->  #1, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+#2  ->  #2, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+#54  ->  #54, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+#55  ->  #55, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+#47  ->  #47, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+#56  ->  #56, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+#5  ->  #5, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+#8  ->  #8, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+#13  ->  #13, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+#14  ->  #14, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+#15  ->  #15, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+#49  ->  #49, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+#50  ->  #50, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+#51  ->  #51, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+#46  ->  #46, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+#48  ->  #48, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+#52  ->  #52, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+------------------------------------------------
+-------- [search_detail] search ../src/smt/smt_context.cpp:3751 ---------
+asserted formulas:
+(<= x 8)
+(>= y 6)
+(>= (+ (* 3 y) (* (- 1) z)) 0)
+(>= (+ (* 3 x) (* (- 1) y)) 0)
+inconsistent: 0
+------------------------------------------------
+-------- [literal_occ] init_search ../src/smt/smt_context.cpp:3699 ---------
+------------------------------------------------
+-------- [after_init_search] search ../src/smt/smt_context.cpp:3754 ---------
+Logical context:
+scope-lvl: 0
+base-lvl:  0
+search-lvl:  0
+inconsistent(): 0
+m_asserted_formulas.inconsistent(): 0
+0 #1 := true
+1 #6 := 8
+#5 := x
+#37 := (<= x 8)
+2 #9 := 6
+#8 := y
+#44 := (>= y 6)
+3 #47 := 0
+#13 := z
+#49 := -1
+#50 := (* -1 z)
+#14 := 3
+#15 := (* 3 y)
+#51 := (+ #15 #50)
+#45 := (>= #51 0)
+4 #48 := (* -1 y)
+#46 := (* 3 x)
+#52 := (+ #46 #48)
+#53 := (>= #52 0)
+#2 := false
+#54 := 1
+#55 := 1.0
+#56 := 0.0
+asserted formulas:
+#37 #44 #45 #53 
+current assignment:
+1 #37: (<= x 8)
+2 #44: (>= y 6)
+3 #45: (>= (+ (* 3 y) (* -1 z)) 0)
+4 #53: (>= (+ (* 3 x) (* -1 y)) 0)
+equivalence classes: 17
+#1: true
+#2: false
+#54: 1
+#55: 1.0
+#47: 0
+#56: 0.0
+#5: x
+#8: y
+#13: z
+#14: 3
+#15: (* 3 y)
+#49: -1
+#50: (* -1 z)
+#51: (+ (* 3 y) (* -1 z))
+#46: (* 3 x)
+#48: (* -1 y)
+#52: (+ (* 3 x) (* -1 y))
+expression -> bool_var:
+(#1 -> 0) (#37 -> 1) (#44 -> 2) (#45 -> 3) (#53 -> 4) 
+relevant exprs:
+#37 #6 #5 #44 #9 #8 #45 #47 #51 #50 #15 #13 #49 #14 #53 #52 #48 #46 
+Theory arithmetic:
+number of constraints = 16
+(0) j0 >= 1
+(1) j0 <= 1
+(2) j1 >= 1
+(3) j1 <= 1
+(4) j2 >= 0
+(5) j2 <= 0
+(6) j3 >= 0
+(7) j3 <= 0
+3j5 - j6
+3j4 - j5
+ -  3j5 +  j6 +  _t7 = 0
+ -  3j4 +  j5 +  _t8 = 0
+
+inf columns: none
+[0]    := (0, 0)               [(1, 0), (1, 0)]
+[1]    := (0, 0)               [(1, 0), (1, 0)]
+[2]    := (0, 0)               [(0, 0), (0, 0)]
+[3]    := (0, 0)               [(0, 0), (0, 0)]
+[4]    := (0, 0)               [-oo, oo]
+[5]    := (0, 0)               [-oo, oo]
+[6]    := (0, 0)               [-oo, oo]
+[7]    := (0, 0) base          [-oo, oo]
+3j5 - j6
+[8]    := (0, 0) base          [-oo, oo]
+3j4 - j5
+irr: v0 j0, int := 54: 1
+irr: v1 j1 := 55: 1.0
+v2 j2, int := 47: 0
+irr: v3 j3 := 56: 0.0
+v4 j4, int := 5: x
+v5 j5, int := 8: y
+v6 j6, int := 13: z
+v7 t7, int := 51: (+ (* 3 y) (* -1 z))
+v8 t8, int := 52: (+ (* 3 x) (* -1 y))
+recfun
+disabled guards:
+
+enabled guards:
+
+decl2enodes:
+id 25 -> #51 #52
+id 27 -> #15 #50 #46 #48
+hot bool vars:
+------------------------------------------------
+-------- [search_lite] search ../src/smt/smt_context.cpp:3757 ---------
+searching...
+------------------------------------------------
+-------- [bounded_search] bounded_search ../src/smt/smt_context.cpp:3873 ---------
+starting bounded search...
+------------------------------------------------
+-------- [propagate] propagate ../src/smt/smt_context.cpp:1696 ---------
+propagating... 0:4
+------------------------------------------------
+-------- [propagate_atoms] propagate_atoms ../src/smt/smt_context.cpp:1320 ---------
+1 2 3 4
+------------------------------------------------
+-------- [propagate_atoms] propagate_atoms ../src/smt/smt_context.cpp:1326 ---------
+propagating atom, #37, is_enode(): 0 tag: th 1
+------------------------------------------------
+-------- [arith] assign_eh ../src/smt/theory_lra.cpp:967 ---------
+assign p1: (<= x 8)
+------------------------------------------------
+-------- [propagate_atoms] propagate_atoms ../src/smt/smt_context.cpp:1326 ---------
+propagating atom, #44, is_enode(): 0 tag: th 2
+------------------------------------------------
+-------- [arith] assign_eh ../src/smt/theory_lra.cpp:967 ---------
+assign p2: (>= y 6)
+------------------------------------------------
+-------- [propagate_atoms] propagate_atoms ../src/smt/smt_context.cpp:1326 ---------
+propagating atom, #45, is_enode(): 0 tag: th 3
+------------------------------------------------
+-------- [arith] assign_eh ../src/smt/theory_lra.cpp:967 ---------
+assign p3: (>= (+ (* 3 y) (* -1 z)) 0)
+------------------------------------------------
+-------- [propagate_atoms] propagate_atoms ../src/smt/smt_context.cpp:1326 ---------
+propagating atom, #53, is_enode(): 0 tag: th 4
+------------------------------------------------
+-------- [arith] assign_eh ../src/smt/theory_lra.cpp:967 ---------
+assign p4: (>= (+ (* 3 x) (* -1 y)) 0)
+------------------------------------------------
+-------- [arith] flush_bound_axioms ../src/smt/theory_lra.cpp:2560 ---------
+flush bound axioms
+------------------------------------------------
+-------- [arith] propagate_core ../src/smt/theory_lra.cpp:2095 ---------
+propagate: 1
+------------------------------------------------
+-------- [arith] assert_bound ../src/smt/theory_lra.cpp:2918 ---------
+8  >= v4
+------------------------------------------------
+-------- [lar_solver_feas] update_column_type_and_bound ../src/math/lp/lar_solver.cpp:1711 ---------
+j = 4 was feas
+------------------------------------------------
+-------- [lar_solver_feas] update_column_type_and_bound ../src/math/lp/lar_solver.cpp:1799 ---------
+j4 <= 8
+dep:
+j4 <= 8
+
+------------------------------------------------
+-------- [lar_solver] insert_to_columns_with_changed_bounds ../src/math/lp/lar_solver.cpp:1823 ---------
+column 4 feas
+------------------------------------------------
+-------- [lar_solver_feas] update_column_type_and_bound ../src/math/lp/lar_solver.cpp:1818 ---------
+j = 4 became feas, and non-bounded
+------------------------------------------------
+-------- [arith] propagate_core ../src/smt/theory_lra.cpp:2095 ---------
+propagate: 2
+------------------------------------------------
+-------- [arith] assert_bound ../src/smt/theory_lra.cpp:2918 ---------
+6  <= v5
+------------------------------------------------
+-------- [lar_solver_feas] update_column_type_and_bound ../src/math/lp/lar_solver.cpp:1711 ---------
+j = 5 was feas
+------------------------------------------------
+-------- [lar_solver_feas] update_column_type_and_bound ../src/math/lp/lar_solver.cpp:1799 ---------
+j5 >= 6
+dep:
+j5 >= 6
+
+------------------------------------------------
+-------- [lar_solver] insert_to_columns_with_changed_bounds ../src/math/lp/lar_solver.cpp:1823 ---------
+column 5 non-feas
+------------------------------------------------
+-------- [lar_solver_feas] update_column_type_and_bound ../src/math/lp/lar_solver.cpp:1818 ---------
+j = 5 became non-feas, and non-bounded
+------------------------------------------------
+-------- [arith] propagate_core ../src/smt/theory_lra.cpp:2095 ---------
+propagate: 3
+------------------------------------------------
+-------- [arith] assert_bound ../src/smt/theory_lra.cpp:2918 ---------
+0  <= v7
+------------------------------------------------
+-------- [lar_solver_feas] update_column_type_and_bound ../src/math/lp/lar_solver.cpp:1711 ---------
+j = 7 was feas
+------------------------------------------------
+-------- [lar_solver_feas] update_column_type_and_bound ../src/math/lp/lar_solver.cpp:1799 ---------
+j7 >= 0
+dep:
+3j5 - j6 >= 0
+
+------------------------------------------------
+-------- [lar_solver] insert_to_columns_with_changed_bounds ../src/math/lp/lar_solver.cpp:1823 ---------
+column 7 feas
+------------------------------------------------
+-------- [lar_solver_feas] update_column_type_and_bound ../src/math/lp/lar_solver.cpp:1818 ---------
+j = 7 became feas, and non-bounded
+------------------------------------------------
+-------- [arith] set_bound ../src/smt/theory_lra.cpp:3011 ---------
+tighter bound 7
+------------------------------------------------
+-------- [arith] has_bound ../src/smt/theory_lra.cpp:3053 ---------
+_t7 7
+------------------------------------------------
+-------- [arith] propagate_core ../src/smt/theory_lra.cpp:2095 ---------
+propagate: 4
+------------------------------------------------
+-------- [arith] assert_bound ../src/smt/theory_lra.cpp:2918 ---------
+0  <= v8
+------------------------------------------------
+-------- [lar_solver_feas] update_column_type_and_bound ../src/math/lp/lar_solver.cpp:1711 ---------
+j = 8 was feas
+------------------------------------------------
+-------- [lar_solver_feas] update_column_type_and_bound ../src/math/lp/lar_solver.cpp:1799 ---------
+j8 >= 0
+dep:
+3j4 - j5 >= 0
+
+------------------------------------------------
+-------- [lar_solver] insert_to_columns_with_changed_bounds ../src/math/lp/lar_solver.cpp:1823 ---------
+column 8 feas
+------------------------------------------------
+-------- [lar_solver_feas] update_column_type_and_bound ../src/math/lp/lar_solver.cpp:1818 ---------
+j = 8 became feas, and non-bounded
+------------------------------------------------
+-------- [arith] set_bound ../src/smt/theory_lra.cpp:3011 ---------
+tighter bound 8
+------------------------------------------------
+-------- [arith] has_bound ../src/smt/theory_lra.cpp:3053 ---------
+_t8 8
+------------------------------------------------
+-------- [pcs] make_feasible ../src/smt/theory_lra.cpp:3166 ---------
+number of constraints = 16
+(0) j0 >= 1
+(1) j0 <= 1
+(2) j1 >= 1
+(3) j1 <= 1
+(4) j2 >= 0
+(5) j2 <= 0
+(6) j3 >= 0
+(7) j3 <= 0
+(8) j4 <= 8
+(10) j5 >= 6
+(12) 3j5 - j6 >= 0
+(14) 3j4 - j5 >= 0
+------------------------------------------------
+-------- [arith_verbose] make_feasible ../src/smt/theory_lra.cpp:3167 ---------
+before calling lp().find_feasible_solution()
+Theory arithmetic:
+number of constraints = 16
+(0) j0 >= 1
+(1) j0 <= 1
+(2) j1 >= 1
+(3) j1 <= 1
+(4) j2 >= 0
+(5) j2 <= 0
+(6) j3 >= 0
+(7) j3 <= 0
+(8) j4 <= 8
+(10) j5 >= 6
+(12) 3j5 - j6 >= 0
+(14) 3j4 - j5 >= 0
+3j5 - j6
+3j4 - j5
+ -  3j5 +  j6 +  _t7 = 0
+ -  3j4 +  j5 +  _t8 = 0
+
+inf columns: none
+[0]    := (0, 0)               [(1, 0), (1, 0)]
+[1]    := (0, 0)               [(1, 0), (1, 0)]
+[2]    := (0, 0)               [(0, 0), (0, 0)]
+[3]    := (0, 0)               [(0, 0), (0, 0)]
+[4]    := (0, 0)               [-oo, (8, 0)]
+[5]    := (0, 0)               [(6, 0), oo]
+[6]    := (0, 0)               [-oo, oo]
+[7]    := (0, 0) base          [(0, 0), oo]
+3j5 - j6
+[8]    := (0, 0) base          [(0, 0), oo]
+3j4 - j5
+irr: v0 j0, int := 54: 1
+irr: v1 j1 := 55: 1.0
+v2 j2, int := 47: 0
+irr: v3 j3 := 56: 0.0
+v4 j4, int := 5: x
+v5 j5, int := 8: y
+v6 j6, int := 13: z
+v7 t7, int := 51: (+ (* 3 y) (* -1 z))
+v8 t8, int := 52: (+ (* 3 x) (* -1 y))
+------------------------------------------------
+-------- [lar_solver_feas] add_delta_to_x ../src/math/lp/lp_core_solver_base.h:554 ---------
+not tracking feas j = 0 v = (1, 0) delta = (1, 0) feas
+------------------------------------------------
+-------- [lar_solver_feas] add_delta_to_x ../src/math/lp/lp_core_solver_base.h:554 ---------
+not tracking feas j = 1 v = (1, 0) delta = (1, 0) feas
+------------------------------------------------
+-------- [lar_solver_feas] add_delta_to_x ../src/math/lp/lp_core_solver_base.h:554 ---------
+not tracking feas j = 5 v = (6, 0) delta = (6, 0) feas
+------------------------------------------------
+-------- [lar_solver_feas] add_delta_to_x_and_track_feasibility ../src/math/lp/lp_core_solver_base.h:541 ---------
+del = (18, 0), was x[7] = (0, 0)
+------------------------------------------------
+-------- [lar_solver_feas] add_delta_to_x_and_track_feasibility ../src/math/lp/lp_core_solver_base.h:543 ---------
+became x[7] = (18, 0)
+------------------------------------------------
+-------- [change_x_del] change_basic_columns_dependend_on_a_given_nb_column ../src/math/lp/lar_solver.cpp:710 ---------
+changed basis column 7, it is feas
+------------------------------------------------
+-------- [lar_solver_feas] add_delta_to_x_and_track_feasibility ../src/math/lp/lp_core_solver_base.h:541 ---------
+del = (-6, 0), was x[8] = (0, 0)
+------------------------------------------------
+-------- [lar_solver_feas] add_delta_to_x_and_track_feasibility ../src/math/lp/lp_core_solver_base.h:543 ---------
+became x[8] = (-6, 0)
+------------------------------------------------
+-------- [change_x_del] change_basic_columns_dependend_on_a_given_nb_column ../src/math/lp/lar_solver.cpp:710 ---------
+changed basis column 8, it is inf
+------------------------------------------------
+-------- [lar_solver] solve ../src/math/lp/lar_core_solver_def.h:86 ---------
+UNKNOWN
+------------------------------------------------
+-------- [lar_solver] solve ../src/math/lp/lp_primal_core_solver_tableau_def.h:94 ---------
+solve UNKNOWN
+------------------------------------------------
+-------- [lar_solver_feas] one_iteration_tableau_rows ../src/math/lp/lp_primal_core_solver.h:397 ---------
+entering = 4, leaving = 8, new_val_for_leaving = (0, 0), theta = (2, 0)
+------------------------------------------------
+-------- [lar_solver_feas] one_iteration_tableau_rows ../src/math/lp/lp_primal_core_solver.h:398 ---------
+leaving = 8 removed from inf_heap()
+------------------------------------------------
+-------- [lar_solver_feas] add_delta_to_x ../src/math/lp/lp_core_solver_base.h:554 ---------
+not tracking feas j = 4 v = (2, 0) delta = (2, 0) feas
+------------------------------------------------
+-------- [lar_solver] change_basis ../src/math/lp/lp_core_solver_base.h:387 ---------
+entering = 4, leaving = 8
+------------------------------------------------
+-------- [lar_solver] solve ../src/math/lp/lp_primal_core_solver_tableau_def.h:111 ---------
+one iteration tableau OPTIMAL
+------------------------------------------------
+-------- [lar_solver] solve ../src/math/lp/lar_core_solver_def.h:121 ---------
+OPTIMAL
+------------------------------------------------
+-------- [lar_solver] set_status ../src/math/lp/lar_solver.cpp:144 ---------
+setting status to OPTIMAL
+------------------------------------------------
+-------- [arith_verbose] make_feasible ../src/smt/theory_lra.cpp:3169 ---------
+Theory arithmetic:
+number of constraints = 16
+(0) j0 >= 1
+(1) j0 <= 1
+(2) j1 >= 1
+(3) j1 <= 1
+(4) j2 >= 0
+(5) j2 <= 0
+(6) j3 >= 0
+(7) j3 <= 0
+(8) j4 <= 8
+(10) j5 >= 6
+(12) 3j5 - j6 >= 0
+(14) 3j4 - j5 >= 0
+3j5 - j6
+3j4 - j5
+ -  3j5 +  j6 +  _t7 = 0
+ +  j4 -  1/3j5 -  1/3_t8 = 0
+
+inf columns: none
+[0]    := (1, 0)               [(1, 0), (1, 0)]
+[1]    := (1, 0)               [(1, 0), (1, 0)]
+[2]    := (0, 0)               [(0, 0), (0, 0)]
+[3]    := (0, 0)               [(0, 0), (0, 0)]
+[4]    := (2, 0) base          [-oo, (8, 0)]
+[5]    := (6, 0)               [(6, 0), oo]
+[6]    := (0, 0)               [-oo, oo]
+[7]    := (18, 0) base         [(0, 0), oo]
+3j5 - j6
+[8]    := (0, 0)               [(0, 0), oo]
+3j4 - j5
+irr: v0 j0, int := 54: 1
+irr: v1 j1 := 55: 1.0
+v2 j2, int := 47: 0
+irr: v3 j3 := 56: 0.0
+v4 j4, int := 5: x
+v5 j5, int := 8: y
+v6 j6, int := 13: z
+v7 t7, int := 51: (+ (* 3 y) (* -1 z))
+v8 t8, int := 52: (+ (* 3 x) (* -1 y))
+------------------------------------------------
+-------- [simplify_clauses] simplify_clauses ../src/smt/smt_context.cpp:2667 ---------
+no clauses to simplify
+------------------------------------------------
+-------- [final_check_stats] final_check ../src/smt/smt_context.cpp:3997 ---------
+m_stats.m_num_final_checks = 1
+------------------------------------------------
+-------- [final_check_step] final_check ../src/smt/smt_context.cpp:4012 ---------
+processing: 0, result: done
+------------------------------------------------
+-------- [arith] final_check_eh ../src/smt/theory_lra.cpp:1607 ---------
+Theory arithmetic:
+number of constraints = 16
+(0) j0 >= 1
+(1) j0 <= 1
+(2) j1 >= 1
+(3) j1 <= 1
+(4) j2 >= 0
+(5) j2 <= 0
+(6) j3 >= 0
+(7) j3 <= 0
+(8) j4 <= 8
+(10) j5 >= 6
+(12) 3j5 - j6 >= 0
+(14) 3j4 - j5 >= 0
+3j5 - j6
+3j4 - j5
+ -  3j5 +  j6 +  _t7 = 0
+ +  j4 -  1/3j5 -  1/3_t8 = 0
+
+inf columns: none
+[0]    := (1, 0)               [(1, 0), (1, 0)]
+[1]    := (1, 0)               [(1, 0), (1, 0)]
+[2]    := (0, 0)               [(0, 0), (0, 0)]
+[3]    := (0, 0)               [(0, 0), (0, 0)]
+[4]    := (2, 0) base          [-oo, (8, 0)]
+[5]    := (6, 0)               [(6, 0), oo]
+[6]    := (0, 0)               [-oo, oo]
+[7]    := (18, 0) base         [(0, 0), oo]
+3j5 - j6
+[8]    := (0, 0)               [(0, 0), oo]
+3j4 - j5
+irr: v0 j0, int := 54: 1
+irr: v1 j1 := 55: 1.0
+v2 j2, int := 47: 0
+irr: v3 j3 := 56: 0.0
+v4 j4, int := 5: x
+v5 j5, int := 8: y
+v6 j6, int := 13: z
+v7 t7, int := 51: (+ (* 3 y) (* -1 z))
+v8 t8, int := 52: (+ (* 3 x) (* -1 y))
+------------------------------------------------
+-------- [arith] check_lia ../src/smt/theory_lra.cpp:1866 ---------
+------------------------------------------------
+-------- [arith] check_nla ../src/smt/theory_lra.cpp:2009 ---------
+no nla
+------------------------------------------------
+-------- [arith_verbose] assume_eqs ../src/smt/theory_lra.cpp:1501 ---------
+Theory arithmetic:
+number of constraints = 16
+(0) j0 >= 1
+(1) j0 <= 1
+(2) j1 >= 1
+(3) j1 <= 1
+(4) j2 >= 0
+(5) j2 <= 0
+(6) j3 >= 0
+(7) j3 <= 0
+(8) j4 <= 8
+(10) j5 >= 6
+(12) 3j5 - j6 >= 0
+(14) 3j4 - j5 >= 0
+3j5 - j6
+3j4 - j5
+ -  3j5 +  j6 +  _t7 = 0
+ +  j4 -  1/3j5 -  1/3_t8 = 0
+
+inf columns: none
+[0]    := (1, 0)               [(1, 0), (1, 0)]
+[1]    := (1, 0)               [(1, 0), (1, 0)]
+[2]    := (0, 0)               [(0, 0), (0, 0)]
+[3]    := (0, 0)               [(0, 0), (0, 0)]
+[4]    := (2, 0) base          [-oo, (8, 0)]
+[5]    := (6, 0)               [(6, 0), oo]
+[6]    := (0, 0)               [-oo, oo]
+[7]    := (18, 0) base         [(0, 0), oo]
+3j5 - j6
+[8]    := (0, 0)               [(0, 0), oo]
+3j4 - j5
+irr: v0 j0, int := 54: 1
+irr: v1 j1 := 55: 1.0
+v2 j2, int := 47: 0
+irr: v3 j3 := 56: 0.0
+v4 j4, int := 5: x
+v5 j5, int := 8: y
+v6 j6, int := 13: z
+v7 t7, int := 51: (+ (* 3 y) (* -1 z))
+v8 t8, int := 52: (+ (* 3 x) (* -1 y))
+------------------------------------------------
+-------- [arith] random_update ../src/smt/theory_lra.cpp:1486 ---------
+
+------------------------------------------------
+-------- [final_check_step] final_check ../src/smt/smt_context.cpp:4018 ---------
+final check 'arithmetic ok: done inconsistent 0
+------------------------------------------------
+-------- [final_check_step] final_check ../src/smt/smt_context.cpp:4012 ---------
+processing: 1, result: done
+------------------------------------------------
+-------- [final_check_step] final_check ../src/smt/smt_context.cpp:4018 ---------
+final check 'array ok: done inconsistent 0
+------------------------------------------------
+-------- [final_check_step] final_check ../src/smt/smt_context.cpp:4012 ---------
+processing: 2, result: done
+------------------------------------------------
+-------- [final_check_step] final_check ../src/smt/smt_context.cpp:4018 ---------
+final check 'bit-vector ok: done inconsistent 0
+------------------------------------------------
+-------- [final_check_step] final_check ../src/smt/smt_context.cpp:4012 ---------
+processing: 3, result: done
+------------------------------------------------
+-------- [final_check_step] final_check ../src/smt/smt_context.cpp:4018 ---------
+final check 'datatype ok: done inconsistent 0
+------------------------------------------------
+-------- [final_check_step] final_check ../src/smt/smt_context.cpp:4012 ---------
+processing: 4, result: done
+------------------------------------------------
+-------- [final_check_step] final_check ../src/smt/smt_context.cpp:4018 ---------
+final check 'recfun ok: done inconsistent 0
+------------------------------------------------
+-------- [final_check_step] final_check ../src/smt/smt_context.cpp:4012 ---------
+processing: 5, result: done
+------------------------------------------------
+-------- [final_check_step] final_check ../src/smt/smt_context.cpp:4018 ---------
+final check 'datalog ok: done inconsistent 0
+------------------------------------------------
+-------- [final_check_step] final_check ../src/smt/smt_context.cpp:4012 ---------
+processing: 6, result: done
+------------------------------------------------
+-------- [final_check_step] final_check ../src/smt/smt_context.cpp:4018 ---------
+final check 'seq ok: done inconsistent 0
+------------------------------------------------
+-------- [final_check_step] final_check ../src/smt/smt_context.cpp:4012 ---------
+processing: 7, result: done
+------------------------------------------------
+-------- [final_check_step] final_check ../src/smt/smt_context.cpp:4018 ---------
+final check 'unknown ok: done inconsistent 0
+------------------------------------------------
+-------- [final_check_step] final_check ../src/smt/smt_context.cpp:4012 ---------
+processing: 8, result: done
+------------------------------------------------
+-------- [final_check_step] final_check ../src/smt/smt_context.cpp:4018 ---------
+final check 'fpa ok: done inconsistent 0
+------------------------------------------------
+-------- [final_check_step] final_check ../src/smt/smt_context.cpp:4012 ---------
+processing: 9, result: done
+------------------------------------------------
+-------- [final_check_step] final_check ../src/smt/smt_context.cpp:4018 ---------
+final check 'unknown ok: done inconsistent 0
+------------------------------------------------
+-------- [final_check_step] final_check ../src/smt/smt_context.cpp:4012 ---------
+processing: 10, result: done
+------------------------------------------------
+-------- [final_check_step] final_check ../src/smt/smt_context.cpp:4018 ---------
+final check 'unknown ok: done inconsistent 0
+------------------------------------------------
+-------- [final_check_step] final_check ../src/smt/smt_context.cpp:4012 ---------
+processing: 11, result: done
+------------------------------------------------
+-------- [final_check_step] final_check ../src/smt/smt_context.cpp:4026 ---------
+quantifier  ok: done inconsistent 0
+------------------------------------------------
+-------- [final_check_step] final_check ../src/smt/smt_context.cpp:4045 ---------
+result: done
+------------------------------------------------
+-------- [final_check_step] final_check ../src/smt/smt_context.cpp:4053 ---------
+RESULT final_check: done
+------------------------------------------------
+-------- [final_check_result] bounded_search ../src/smt/smt_context.cpp:3934 ---------
+fcs: done last_search_failure: 0
+------------------------------------------------
+-------- [search_bug] search ../src/smt/smt_context.cpp:3765 ---------
+status: l_true, inconsistent: 0
+------------------------------------------------
+-------- [assigned_literals_per_lvl] search ../src/smt/smt_context.cpp:3766 ---------
+[4], num_assigned: 4
+------------------------------------------------
+-------- [guessed_literals] search ../src/smt/smt_context.cpp:3774 ---------
+
+------------------------------------------------
+-------- [after_search] check_finalize ../src/smt/smt_context.cpp:3461 ---------
+result: l_true
+Logical context:
+scope-lvl: 0
+base-lvl:  0
+search-lvl:  0
+inconsistent(): 0
+m_asserted_formulas.inconsistent(): 0
+0 #1 := true
+1 #6 := 8
+#5 := x
+#37 := (<= x 8)
+2 #9 := 6
+#8 := y
+#44 := (>= y 6)
+3 #47 := 0
+#13 := z
+#49 := -1
+#50 := (* -1 z)
+#14 := 3
+#15 := (* 3 y)
+#51 := (+ #15 #50)
+#45 := (>= #51 0)
+4 #48 := (* -1 y)
+#46 := (* 3 x)
+#52 := (+ #46 #48)
+#53 := (>= #52 0)
+#2 := false
+#54 := 1
+#55 := 1.0
+#56 := 0.0
+asserted formulas:
+#37 #44 #45 #53 
+current assignment:
+1 #37: (<= x 8)
+2 #44: (>= y 6)
+3 #45: (>= (+ (* 3 y) (* -1 z)) 0)
+4 #53: (>= (+ (* 3 x) (* -1 y)) 0)
+equivalence classes: 17
+#1: true
+#2: false
+#54: 1
+#55: 1.0
+#47: 0
+#56: 0.0
+#5: x
+#8: y
+#13: z
+#14: 3
+#15: (* 3 y)
+#49: -1
+#50: (* -1 z)
+#51: (+ (* 3 y) (* -1 z))
+#46: (* 3 x)
+#48: (* -1 y)
+#52: (+ (* 3 x) (* -1 y))
+expression -> bool_var:
+(#1 -> 0) (#37 -> 1) (#44 -> 2) (#45 -> 3) (#53 -> 4) 
+relevant exprs:
+#37 #6 #5 #44 #9 #8 #45 #47 #51 #50 #15 #13 #49 #14 #53 #52 #48 #46 
+Theory arithmetic:
+number of constraints = 16
+(0) j0 >= 1
+(1) j0 <= 1
+(2) j1 >= 1
+(3) j1 <= 1
+(4) j2 >= 0
+(5) j2 <= 0
+(6) j3 >= 0
+(7) j3 <= 0
+(8) j4 <= 8
+(10) j5 >= 6
+(12) 3j5 - j6 >= 0
+(14) 3j4 - j5 >= 0
+3j5 - j6
+3j4 - j5
+ -  3j5 +  j6 +  _t7 = 0
+ +  j4 -  1/3j5 -  1/3_t8 = 0
+
+inf columns: none
+[0]    := (1, 0)               [(1, 0), (1, 0)]
+[1]    := (1, 0)               [(1, 0), (1, 0)]
+[2]    := (0, 0)               [(0, 0), (0, 0)]
+[3]    := (0, 0)               [(0, 0), (0, 0)]
+[4]    := (2, 0) base          [-oo, (8, 0)]
+[5]    := (6, 0)               [(6, 0), oo]
+[6]    := (0, 0)               [-oo, oo]
+[7]    := (18, 0) base         [(0, 0), oo]
+3j5 - j6
+[8]    := (0, 0)               [(0, 0), oo]
+3j4 - j5
+irr: v0 j0, int := 54: 1
+irr: v1 j1 := 55: 1.0
+v2 j2, int := 47: 0
+irr: v3 j3 := 56: 0.0
+v4 j4, int := 5: x
+v5 j5, int := 8: y
+v6 j6, int := 13: z
+v7 t7, int := 51: (+ (* 3 y) (* -1 z))
+v8 t8, int := 52: (+ (* 3 x) (* -1 y))
+recfun
+disabled guards:
+
+enabled guards:
+
+decl2enodes:
+id 25 -> #51 #52
+id 27 -> #15 #50 #46 #48
+hot bool vars:
+case splits
+------------------------------------------------
+-------- [get_model] mk_proto_model ../src/smt/smt_context.cpp:4611 ---------
+Logical context:
+scope-lvl: 0
+base-lvl:  0
+search-lvl:  0
+inconsistent(): 0
+m_asserted_formulas.inconsistent(): 0
+0 #1 := true
+1 #6 := 8
+#5 := x
+#37 := (<= x 8)
+2 #9 := 6
+#8 := y
+#44 := (>= y 6)
+3 #47 := 0
+#13 := z
+#49 := -1
+#50 := (* -1 z)
+#14 := 3
+#15 := (* 3 y)
+#51 := (+ #15 #50)
+#45 := (>= #51 0)
+4 #48 := (* -1 y)
+#46 := (* 3 x)
+#52 := (+ #46 #48)
+#53 := (>= #52 0)
+#2 := false
+#54 := 1
+#55 := 1.0
+#56 := 0.0
+asserted formulas:
+#37 #44 #45 #53 
+current assignment:
+1 #37: (<= x 8)
+2 #44: (>= y 6)
+3 #45: (>= (+ (* 3 y) (* -1 z)) 0)
+4 #53: (>= (+ (* 3 x) (* -1 y)) 0)
+equivalence classes: 17
+#1: true
+#2: false
+#54: 1
+#55: 1.0
+#47: 0
+#56: 0.0
+#5: x
+#8: y
+#13: z
+#14: 3
+#15: (* 3 y)
+#49: -1
+#50: (* -1 z)
+#51: (+ (* 3 y) (* -1 z))
+#46: (* 3 x)
+#48: (* -1 y)
+#52: (+ (* 3 x) (* -1 y))
+expression -> bool_var:
+(#1 -> 0) (#37 -> 1) (#44 -> 2) (#45 -> 3) (#53 -> 4) 
+relevant exprs:
+#37 #6 #5 #44 #9 #8 #45 #47 #51 #50 #15 #13 #49 #14 #53 #52 #48 #46 
+Theory arithmetic:
+number of constraints = 16
+(0) j0 >= 1
+(1) j0 <= 1
+(2) j1 >= 1
+(3) j1 <= 1
+(4) j2 >= 0
+(5) j2 <= 0
+(6) j3 >= 0
+(7) j3 <= 0
+(8) j4 <= 8
+(10) j5 >= 6
+(12) 3j5 - j6 >= 0
+(14) 3j4 - j5 >= 0
+3j5 - j6
+3j4 - j5
+ -  3j5 +  j6 +  _t7 = 0
+ +  j4 -  1/3j5 -  1/3_t8 = 0
+
+inf columns: none
+[0]    := (1, 0)               [(1, 0), (1, 0)]
+[1]    := (1, 0)               [(1, 0), (1, 0)]
+[2]    := (0, 0)               [(0, 0), (0, 0)]
+[3]    := (0, 0)               [(0, 0), (0, 0)]
+[4]    := (2, 0) base          [-oo, (8, 0)]
+[5]    := (6, 0)               [(6, 0), oo]
+[6]    := (0, 0)               [-oo, oo]
+[7]    := (18, 0) base         [(0, 0), oo]
+3j5 - j6
+[8]    := (0, 0)               [(0, 0), oo]
+3j4 - j5
+irr: v0 j0, int := 54: 1
+irr: v1 j1 := 55: 1.0
+v2 j2, int := 47: 0
+irr: v3 j3 := 56: 0.0
+v4 j4, int := 5: x
+v5 j5, int := 8: y
+v6 j6, int := 13: z
+v7 t7, int := 51: (+ (* 3 y) (* -1 z))
+v8 t8, int := 52: (+ (* 3 x) (* -1 y))
+recfun
+disabled guards:
+
+enabled guards:
+
+decl2enodes:
+id 25 -> #51 #52
+id 27 -> #15 #50 #46 #48
+hot bool vars:
+normalized enodes:
+#1     #1     := true
+#2     #2     := false
+#54    #54    := Int[1:1]
+#55    #55    := Real[1:0]
+#47    #47    := Int[0:1]	*
+#56    #56    := Real[0:0]
+#5     #5     := x	*
+#8     #8     := y	*
+#13    #13    := z	*
+#14    #14    := Int[3:1]	*
+#15    #15    := (* #14 #8)	*
+#49    #49    := Int[-1:1]	*
+#50    #50    := (* #49 #13)	*
+#51    #51    := (+ #15 #50)	*
+#46    #46    := (* #14 #5)	*
+#48    #48    := (* #49 #8)	*
+#52    #52    := (+ #46 #48)	*
+#1  ->  #1, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+#2  ->  #2, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+#54  ->  #54, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+#55  ->  #55, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+#47  ->  #47, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+#56  ->  #56, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+#5  ->  #5, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+#8  ->  #8, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+#13  ->  #13, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+#14  ->  #14, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+#15  ->  #15, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+#49  ->  #49, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+#50  ->  #50, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+#51  ->  #51, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+#46  ->  #46, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+#48  ->  #48, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+#52  ->  #52, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+fingerprints:
+------------------------------------------------
+-------- [lar_solver_model] init_model ../src/math/lp/lar_solver.cpp:1026 ---------
+OPTIMAL
+------------------------------------------------
+-------- [lar_solver_model] init_model ../src/math/lp/lar_solver.cpp:1052 ---------
+delta = 1
+model:
+------------------------------------------------
+-------- [arith] init_variable_values ../src/smt/theory_lra.cpp:1449 ---------
+update variable values 1
+Theory arithmetic:
+number of constraints = 16
+(0) j0 >= 1
+(1) j0 <= 1
+(2) j1 >= 1
+(3) j1 <= 1
+(4) j2 >= 0
+(5) j2 <= 0
+(6) j3 >= 0
+(7) j3 <= 0
+(8) j4 <= 8
+(10) j5 >= 6
+(12) 3j5 - j6 >= 0
+(14) 3j4 - j5 >= 0
+3j5 - j6
+3j4 - j5
+ -  3j5 +  j6 +  _t7 = 0
+ +  j4 -  1/3j5 -  1/3_t8 = 0
+
+inf columns: none
+[0]    := (1, 0)               [(1, 0), (1, 0)]
+[1]    := (1, 0)               [(1, 0), (1, 0)]
+[2]    := (0, 0)               [(0, 0), (0, 0)]
+[3]    := (0, 0)               [(0, 0), (0, 0)]
+[4]    := (2, 0) base          [-oo, (8, 0)]
+[5]    := (6, 0)               [(6, 0), oo]
+[6]    := (0, 0)               [-oo, oo]
+[7]    := (18, 0) base         [(0, 0), oo]
+3j5 - j6
+[8]    := (0, 0)               [(0, 0), oo]
+3j4 - j5
+irr: v0 j0 = 1, int := 54: 1
+irr: v1 j1 = 1 := 55: 1.0
+v2 j2 = 0, int := 47: 0
+irr: v3 j3 = 0 := 56: 0.0
+v4 j4 = 2, int := 5: x
+v5 j5 = 6, int := 8: y
+v6 j6 = 0, int := 13: z
+v7 t7 = 18, int := 51: (+ (* 3 y) (* -1 z))
+v8 t8 = 0, int := 52: (+ (* 3 x) (* -1 y))
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3373 ---------
+1 := 1
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3373 ---------
+1.0 := 1
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3373 ---------
+0 := 0
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3373 ---------
+0.0 := 0
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3373 ---------
+x := 2
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3373 ---------
+y := 6
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3373 ---------
+z := 0
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3373 ---------
+(+ (* 3 y) (* (- 1) z)) := 18
+------------------------------------------------
+-------- [arith] get_value ../src/smt/theory_lra.cpp:3373 ---------
+(+ (* 3 x) (* (- 1) y)) := 0
+------------------------------------------------
+-------- [arith] init_model ../src/smt/theory_lra.cpp:3306 ---------
+Theory arithmetic:
+number of constraints = 16
+(0) j0 >= 1
+(1) j0 <= 1
+(2) j1 >= 1
+(3) j1 <= 1
+(4) j2 >= 0
+(5) j2 <= 0
+(6) j3 >= 0
+(7) j3 <= 0
+(8) j4 <= 8
+(10) j5 >= 6
+(12) 3j5 - j6 >= 0
+(14) 3j4 - j5 >= 0
+3j5 - j6
+3j4 - j5
+ -  3j5 +  j6 +  _t7 = 0
+ +  j4 -  1/3j5 -  1/3_t8 = 0
+
+inf columns: none
+[0]    := (1, 0)               [(1, 0), (1, 0)]
+[1]    := (1, 0)               [(1, 0), (1, 0)]
+[2]    := (0, 0)               [(0, 0), (0, 0)]
+[3]    := (0, 0)               [(0, 0), (0, 0)]
+[4]    := (2, 0) base          [-oo, (8, 0)]
+[5]    := (6, 0)               [(6, 0), oo]
+[6]    := (0, 0)               [-oo, oo]
+[7]    := (18, 0) base         [(0, 0), oo]
+3j5 - j6
+[8]    := (0, 0)               [(0, 0), oo]
+3j4 - j5
+irr: v0 j0 = 1, int := 54: 1
+irr: v1 j1 = 1 := 55: 1.0
+v2 j2 = 0, int := 47: 0
+irr: v3 j3 = 0 := 56: 0.0
+v4 j4 = 2, int := 5: x
+v5 j5 = 6, int := 8: y
+v6 j6 = 0, int := 13: z
+v7 t7 = 18, int := 51: (+ (* 3 y) (* -1 z))
+v8 t8 = 0, int := 52: (+ (* 3 x) (* -1 y))
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3361 ---------
+1 v0 := 1
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3361 ---------
+1.0 v1 := 1
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3361 ---------
+0 v2 := 0
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3361 ---------
+0.0 v3 := 0
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3361 ---------
+x v4 := 2
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3361 ---------
+y v5 := 6
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3361 ---------
+z v6 := 0
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3361 ---------
+(+ (* 3 y) (* (- 1) z)) v7 := 18
+------------------------------------------------
+-------- [arith] mk_value ../src/smt/theory_lra.cpp:3361 ---------
+(+ (* 3 x) (* (- 1) y)) v8 := 0
+------------------------------------------------
+-------- [mbqi_bug] mk_proto_model ../src/smt/smt_context.cpp:4626 ---------
+before complete_partial_funcs:
+(define x 2)
+(define y 6)
+(define z 0)
+------------------------------------------------
+-------- [mbqi_bug] mk_proto_model ../src/smt/smt_context.cpp:4628 ---------
+before cleanup:
+(define x 2)
+(define y 6)
+(define z 0)
+------------------------------------------------
+-------- [mbqi_bug] mk_proto_model ../src/smt/smt_context.cpp:4630 ---------
+after cleanup:
+(define x 2)
+(define y 6)
+(define z 0)
+------------------------------------------------
+-------- [flush] flush ../src/smt/smt_context.cpp:3000 ---------
+m_scope_lvl: 0
+------------------------------------------------
